@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildOption>
+	<model>
+		<name>Default</name>
+		<comp>-fpic -fshort-wchar -mcpu=cortex-a8 -mfpu=vfpv3 -mfloat-abi=hard -mlittle-endian -mthumb-interwork</comp>
+		<link>-nostdlib -lc-newlib -lm-newlib</link>
+		<postfix_link>-lstdc++ -lgcc_s</postfix_link>
+		<link_filter>libc-newlib.so libm-newlib.so stdc++ gcc_s</link_filter>
+	</model>
+	<model>
+		<name>Wave</name>
+		<comp>-fpic -fshort-wchar -mcpu=cortex-a8 -mfpu=vfpv3 -mfloat-abi=hard -mlittle-endian -mthumb-interwork</comp>
+		<link>-nostdlib -lc-newlib -lm-newlib</link>
+		<postfix_link>-lstdc++ -lgcc_s</postfix_link>
+		<link_filter>libc-newlib.so libm-newlib.so stdc++ gcc_s</link_filter>
+	</model>
+	<model>
+		<name>WaveWQ</name>
+		<comp>-fpic -fshort-wchar -mcpu=arm9 -mfloat-abi=soft -mlittle-endian -mthumb-interwork</comp>
+		<link>-nostdlib -lc-newlib -lm-newlib</link>
+		<postfix_link>-lstdc++ -lgcc_s</postfix_link>
+		<link_filter>libc-newlib.so libm-newlib.so stdc++ gcc_s</link_filter>
+		<link/>
+	</model>
+</buildOption>	
